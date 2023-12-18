@@ -1,0 +1,38 @@
+.gallery {
+    display: grid;
+    width: 100%; /* Justera detta för att ha 2 bilder på rad */
+}
+@media screen and (min-width: 392px) {
+    .col-12 {
+        margin: 1rem; /* Lite mellanrum mellan bilderna */
+        position: relative;
+        overflow: hidden;
+      }
+      /* Rundade hörn */
+    .col-12 img {
+        border-radius: 1rem; /* Justera detta för önskad rundning */
+        width: 100%;
+        height: auto;
+        display: block;
+        max-width: 100%; /* Gör bilden responsiv */
+        border:.4rem solid var(--black);
+    }
+     
+}
+@media screen and (min-width: 768px) {
+    .col-12 {
+      width: 48%; /* Justera detta för att ha 2 bilder på rad */
+    }
+    /* Visa personens namn vid hovring över bilden */
+    .col-12:hover::after {
+        content: attr(data-name); /* Visa personens namn från data-attributet */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.8); /* Justera detta för önskad bakgrundsfärg */
+        padding: 10px;
+        border-radius: 8px;
+        display: inline-block;
+    }
+}

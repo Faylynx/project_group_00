@@ -1,7 +1,6 @@
 function memberThumbnail(member) {
   const thumbnail = `
-    <div class="col-12">
-      <p>id: ${member.id}</p>
+    <div class="col-12" data-name="${member.first_name} ${member.last_name}">
       <img 
         src="./img/informative/member/${member.id}/jpg/${member.id}_512.jpg"
         width="512" height="512"
