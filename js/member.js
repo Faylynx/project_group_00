@@ -8,8 +8,6 @@ function memberThumbnail(member) {
         <div class = "overlay">
         <div>
         <p class="name">${member.first_name} ${member.last_name}</p>
-        </div>
-        <div>
         <p calss = "mail">${member.mail}@du.se</p>
         </div>
         </div>

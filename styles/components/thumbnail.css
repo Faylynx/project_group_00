@@ -1,14 +1,14 @@
 .gallery {
     display: grid;
     width: 100%; 
-}
-.gallery {
-    display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
+    grid-gap: 1.4rem;
 }
 
 @media screen and (min-width: 392px) {
+    .col-12{
+        position: relative;
+    }
      /* Rundade hörn */
     .col-12 img {
         border-top-left-radius: 1rem; /* Justera detta för önskad rundning */
@@ -27,14 +27,14 @@
         background-color: var(--black);
         color: var(--white);
         display: flex; 
-        flex-direction: row;
-        justify-content: space-between;
         box-sizing: border-box;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
-    
-        
     }
+    .overlay{
+        font-weight: 100;
+    }
+    
 
 }
 @media screen and (min-width: 480px) {
@@ -47,11 +47,9 @@
     }
 
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px){
     .col-12 {
         grid-column: span 4;
-        position: relative;
-        overflow: hidden;
         
     }
     .col-12 img{
@@ -59,31 +57,36 @@
         height: auto;
         display: block;
         transition: transform 0.3s ease;
-    }
-    .col-12::after { 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        background-color: var(--black); 
-        padding: 1rem;
-        border-radius: 1rem;
-        color: white;
-        text-align: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: transform 0.3s ease; opacity: 0.3s ease; visibility: 0.3s ease;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
     }
     .col-12:hover {
-        transform: scale(1,1);
-        border-color: var(--black);
+        transform: scale(1.1);
     }
+
     .col-12:hover img{
         transform: scale(1.1);
-    }  
-    .col-12:hover::after{
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-        visibility: visible;
+    } 
+    .col-12 .overlay{
+        display: none;
     }
+    .col-12:hover .overlay{
+        display: flex;
+        
+    }
+@media screen and (min-width: 996px) {
+    .col-12 {
+        grid-column: span 3;
+        position: relative;
+        
+    }
+    
+}
+@media screen and (min-width: 1366px) {
+    .col-12 {
+        grid-column: span 2;
+        position: relative;
+        
+    }
+}
 }
