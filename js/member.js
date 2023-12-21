@@ -1,14 +1,15 @@
 function memberThumbnail(member) {
   const thumbnail = `
-    <div class="col-12" data-name="${member.first_name} ${member.last_name}">
+    <div class="col-12 col-xs-6 col-md-4 col-lg-3 col-xl-2">
       <img 
         src="./img/informative/member/${member.id}/jpg/${member.id}_512.jpg"
         width="512" height="512"
         alt="Image of ${member.first_name} ${member.last_name}">
         <div class = "overlay">
         <div>
-        <p class="name">${member.first_name} ${member.last_name}</p>
-        <p calss = "mail">${member.mail}@du.se</p>
+        <p class= "info jc-between" > <span class="name"> ${member.first_name} ${member.last_name}</span>
+         <span >${member.mail}@du.se</span>
+        </p>
         </div>
         </div>
     </div>
