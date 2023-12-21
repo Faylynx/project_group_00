@@ -1,14 +1,5 @@
-.gallery {
-    display: grid;
-    width: 100%; 
-    grid-gap: 1.5rem;
-}
-
-
-    .col-12{
-        position: relative;
-    }
-     /* Rundade hörn */
+@media screen and (min-width: 392px) {
+    /* Rundade hörn */
     .col-12 img {
         border-top-left-radius: 1rem; /* Justera detta för önskad rundning */
         border-top-right-radius: 1rem;
@@ -17,7 +8,7 @@
         display: block;
         max-width: 100%; /* Gör bilden responsiv */
         border:.5rem solid var(--black);
-        margin-bottom: -1rem;
+        transform: translateY(.6);
     }   
     .col-12 .overlay {
         position: relative;
@@ -26,15 +17,33 @@
         background-color: var(--black);
         color: var(--white);
         display: flex; 
+        flex-direction: row;
         box-sizing: border-box;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
-        font-weight: 100;
     }
-    .span .mail{
-        justify-content: flex-end;
+    @font-face {
+        font-family: poppins,;
+        src: url('fonts/poppins-v15-latin-ext_latin-600.woff2') format('woff');
     }
+    .name{
+        position: absolute;
+        left: 3%;
+        font-size: 1.5rem;
+    }
+    .email{
+     position: absolute;
+     bottom: 10%;
+     right: 3%;
+     font-style: italic;
+     font-size: 1.3rem;  
+    }
+}    
 @media screen and (min-width: 768px) {
+    .col-12{
+        position: relative;
+        display: flex;
+    }
     
     .col-12 img{
         width: 100%;
@@ -43,6 +52,7 @@
         transition: transform 0.3s ease; box-shadow: 0.3s;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
+        
     }
     .col-12:hover img{
         transform: scale(1.1);
@@ -58,6 +68,15 @@
         left: -3%;
         width: 106%;
         opacity: 0.9;
+        height: 26%;
 
+    }
+}
+@media screen and (min-width: 768px) {
+    .name{
+        font-size: 1.2rem;
+    }
+    .email{
+        font-size: 1.2rem;
     }
 }
