@@ -72,7 +72,10 @@
 
     }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1366px) {
+    .col-12 img{
+        border:.3rem solid var(--black);
+    }
     .name{
         font-size: 1.2rem;
     }
