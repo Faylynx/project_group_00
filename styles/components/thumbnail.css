@@ -7,15 +7,15 @@
         height: auto;
         display: block;
         max-width: 100%; /* Gör bilden responsiv */
-        border:.5rem solid var(--black);
+        border:.4rem solid hsl(var(--base-hue-1), 20%, 20%);
         transform: translateY(.6);
     }   
     .col-12 .overlay {
         position: relative;
         width: 100%;
         height: 5rem;
-        background-color: var(--black);
-        color: var(--white);
+        background-color: hsl(var(--base-hue-1), 20%, 20%);
+        color: hsl(var(--base-hue-1),5%, 80%);
         display: flex; 
         flex-direction: row;
         box-sizing: border-box;
@@ -32,32 +32,44 @@
         font-size: 1.5rem;
     }
     .email{
-     position: absolute;
-     bottom: 10%;
-     right: 3%;
-     font-style: italic;
-     font-size: 1.3rem;  
+        position: absolute;
+        bottom: 10%;
+        right: 3%;
+        font-style: italic;
+        font-size: 1.3rem;  
     }
 }    
 @media screen and (min-width: 768px) {
     .col-12{
         position: relative;
-        display: flex;
     }
     
     .col-12 img{
         width: 100%;
         height: auto;
         display: block;
-        transition: transform 0.3s ease; box-shadow: 0.3s;
+        transition: transform 0.3s ease; filter:  0.3s ease;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
-        
+        z-index: 2;
+    }
+    .col-12::before{
+        content: "";
+        position: absolute;
+        border-radius:1rem;
+        mix-blend-mode: multiply; 
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .col-12:hover::before{
+        opacity: 0.5;
+        z-index: 1;
     }
     .col-12:hover img{
         transform: scale(1.1);
-        filter: brightness(80%) sepia(55%) hue-rotate(1deg) saturate(150%);
-    } 
+        filter:sepia(25%) hue-rotate(-30deg) brightness(100%) blur(.1rem);
+    }  
+    
     .col-12 .overlay{
         display: none;
     }
@@ -69,12 +81,12 @@
         width: 106%;
         opacity: 0.9;
         height: 26%;
-
+        z-index: 3;
     }
 }
 @media screen and (min-width: 1366px) {
     .col-12 img{
-        border:.3rem solid var(--black);
+        border:.3rem solid hsl(var(--base-hue-1), 20%, 20%);
     }
     .name{
         font-size: 1.2rem;

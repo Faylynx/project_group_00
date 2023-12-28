@@ -1,8 +1,19 @@
 function memberThumbnail(member) {
   const thumbnail = `
-    <div class="col-12 col-xs-6 col-md-4 col-lg-3 col-xl-2 gap-2">
+    <div class="col-12 col-xs-6 col-md-4 col-lg-3 col-xxl-2 gap-2">
       <img 
-        src="./img/informative/member/${member.id}/jpg/${member.id}_512.jpg"
+        srcset="
+        ./img/informative/member/${member.id}/webp/${member.id}_256.webp 256w,
+        ./img/informative/member/${member.id}/webp/${member.id}_512.webp 512w,
+        ./img/informative/member/${member.id}/webp/${member.id}_860.webp 860w,
+        ./img/informative/member/${member.id}/webp/${member.id}_1024.webp 1024w,
+        ./img/informative/member/${member.id}/webp/${member.id}_2048.webp 2048w
+        sizes="(max-width: 256px) 256px,
+          (max-width: 512px) 512px,
+          (max-width: 860px) 860px,
+          (max-width: 1024px) 1024px, 
+          2048px" 
+        src="./img/informative/member/${member.id}/webp/${member.id}_512.webp"
         width="512" height="512"
         alt="Image of ${member.first_name} ${member.last_name}">
         <div class = "overlay">
