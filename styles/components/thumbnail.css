@@ -8,7 +8,6 @@
         display: block;
         max-width: 100%; /* Gör bilden responsiv */
         border:.4rem solid hsl(var(--base-hue-1), 20%, 20%);
-        transform: translateY(.6rem);
     }   
     .col-12 .overlay {
         position: relative;
@@ -57,19 +56,19 @@
     .col-12::before{
         content: "";
         position: absolute;
-        height: 110%;
-        width: 109%;
+        height: 106%;
+        width: 108%;
         top: -5%;
         left: -5%;
         bottom: -5%;
         border-radius:1rem;
-        justify-content: space-around;
+        box-shadow: 1.1rem 1.1rem .5rem .5rem;
         background-size: auto;
         background: linear-gradient(
         120deg, hsl(var(--base-hue-5), 60%, 190%),
-        hsl(var(--base-hue-3), 180%, 90%),
-        hsl(var(--base-hue-3), 180%, 50%));
-        mix-blend-mode: screen luminosity;
+        hsl(var(--base-hue-3), 180%, 80%),
+        hsl(var(--base-hue-3), 180%, 60%));
+        mix-blend-mode: multiply;
         background-position: 0 0;
         background-repeat: no-repeat;
         opacity: 0;
@@ -77,13 +76,13 @@
         z-index: -1;  
     }
     .col-12:hover::before{
-        opacity: 0.3;
+        opacity: 0.6;
         z-index: 1;
     }
     
     .col-12:hover img{
-        transform: scale(1.1);
-        filter: blur(.1rem) brightness(1.1); 
+        transform: scale(1.08);
+        filter: blur(.1rem) contrast(150%); 
     }  
   
     .col-12 .overlay{
@@ -92,11 +91,11 @@
     .col-12:hover .overlay{
         display: flex;
         position: absolute;
-        top: 80%;
+        top: 78%;
         left: -3%;
         width: 107%;
         opacity: 0.9;
-        height: 26%;
+        height: 25%;
         z-index: 1;
     } 
 }
