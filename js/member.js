@@ -15,6 +15,19 @@ function memberThumbnail(member) {
           2048px" 
         src="./img/informative/member/${member.id}/webp/${member.id}_512.webp"
         width="512" height="512"
+        srcset="
+        ./img/informative/member/${member.id}/jpg/${member.id}_256.jpg 256w,
+        ./img/informative/member/${member.id}/jpg/${member.id}_512.jpg 512w,
+        ./img/informative/member/${member.id}/jpg/${member.id}_860.jpg 860w,
+        ./img/informative/member/${member.id}/jpg/${member.id}_1024.jpg 1024w,
+        ./img/informative/member/${member.id}/jpg/${member.id}_2048.jpg 2048w
+        sizes="(max-width: 256px) 256px,
+          (max-width: 512px) 512px,
+          (max-width: 860px) 860px,
+          (max-width: 1024px) 1024px, 
+          2048px" 
+        src="./img/informative/member/${member.id}/jpg/${member.id}_512.jpg"
+        width="512" height="512"
         alt="Image of ${member.first_name} ${member.last_name}">
         <div class = "overlay">
         <div>

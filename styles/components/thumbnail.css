@@ -8,7 +8,7 @@
         display: block;
         max-width: 100%; /* Gör bilden responsiv */
         border:.4rem solid hsl(var(--base-hue-1), 20%, 20%);
-        transform: translateY(.6);
+        transform: translateY(.6rem);
     }   
     .col-12 .overlay {
         position: relative;
@@ -48,28 +48,44 @@
         width: 100%;
         height: auto;
         display: block;
-        transition: transform 0.3s ease; filter:  0.3s ease;
+        transition: transform 0.3s ease; filter:  0.3s ease; 
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
-        z-index: 2;
+        z-index: 2;   
     }
+    
     .col-12::before{
         content: "";
         position: absolute;
+        height: 110%;
+        width: 109%;
+        top: -5%;
+        left: -5%;
+        bottom: -5%;
         border-radius:1rem;
-        mix-blend-mode: multiply; 
+        justify-content: space-around;
+        background-size: auto;
+        background: linear-gradient(
+        120deg, hsl(var(--base-hue-5), 60%, 190%),
+        hsl(var(--base-hue-3), 180%, 90%),
+        hsl(var(--base-hue-3), 180%, 50%));
+        mix-blend-mode: screen luminosity;
+        background-position: 0 0;
+        background-repeat: no-repeat;
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.3s ease;  
+        z-index: -1;  
     }
     .col-12:hover::before{
-        opacity: 0.5;
+        opacity: 0.3;
         z-index: 1;
     }
+    
     .col-12:hover img{
         transform: scale(1.1);
-        filter:sepia(25%) hue-rotate(-30deg) brightness(100%) blur(.1rem);
+        filter: blur(.1rem) brightness(1.1); 
     }  
-    
+  
     .col-12 .overlay{
         display: none;
     }
@@ -78,11 +94,11 @@
         position: absolute;
         top: 80%;
         left: -3%;
-        width: 106%;
+        width: 107%;
         opacity: 0.9;
         height: 26%;
-        z-index: 3;
-    }
+        z-index: 1;
+    } 
 }
 @media screen and (min-width: 1366px) {
     .col-12 img{
