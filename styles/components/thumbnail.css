@@ -47,23 +47,21 @@
         width: 100%;
         height: auto;
         display: block;
-        transition: transform 0.3s ease; filter:  0.3s ease; 
+        transition: transform 0.3s ease;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
-        z-index: 2;   
+        z-index: 1;   
     }
     
     .col-12::before{
         content: "";
         position: absolute;
-        height: 106%;
-        width: 108%;
-        top: -5%;
-        left: -5%;
-        bottom: -5%;
+        height: 107%;
+        width: 104%;
+        bottom: -4%;
         border-radius:1rem;
         box-shadow: 1.1rem 1.1rem .5rem .5rem;
-        background-size: auto;
+        background-size: cover;
         background: linear-gradient(
         120deg, hsl(var(--base-hue-5), 60%, 190%),
         hsl(var(--base-hue-3), 180%, 80%),
@@ -73,7 +71,7 @@
         background-repeat: no-repeat;
         opacity: 0;
         transition: opacity 0.3s ease;  
-        z-index: -1;  
+        z-index: 1;  
     }
     .col-12:hover::before{
         opacity: 0.6;
