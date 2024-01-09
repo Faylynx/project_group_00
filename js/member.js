@@ -30,10 +30,8 @@ function memberThumbnail(member) {
         width="512" height="512"
         alt="Image of ${member.first_name} ${member.last_name}">
         <div class = "overlay">
-        <div>
         <p class="name"> ${member.first_name} ${member.last_name}</p>
          <span class="email">${member.mail}@du.se</span>
-        </div>
         </div>
     </div>
   `;
