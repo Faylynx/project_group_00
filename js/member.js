@@ -1,7 +1,12 @@
 function memberThumbnail(member) {
   const thumbnail = `
-    <div class="col-12 col-xs-6 col-md-4 col-lg-3 col-xxl-2 gap-2">
-      <img 
+  <!------ One Card - One Col ------>
+
+  <div class=" br-1 col-12 col-xs-6 col-md-4 col-lg-3 col-xxl-2 gap-2 " >
+
+   <div class=" test_overlay thumbnail_border thumbnail_br">
+   <!------ Card Img ------>
+   <img class="testtest" 
         srcset="
         ./img/informative/member/${member.id}/webp/${member.id}_256.webp 256w,
         ./img/informative/member/${member.id}/webp/${member.id}_512.webp 512w,
@@ -29,13 +34,17 @@ function memberThumbnail(member) {
         src="./img/informative/member/${member.id}/jpg/${member.id}_512.jpg"
         width="512" height="512"
         alt="Image of ${member.first_name} ${member.last_name}">
-        <div class = "overlay">
-        <div>
-        <p class="name"> ${member.first_name} ${member.last_name}</p>
-         <span class="email">${member.mail}@du.se</span>
+
+        
+        <!------ Overlay div ------>
+        <div class = "overlay_box">
+          <p class="overlay_name"> ${member.first_name} ${member.last_name}</p>
+          <span class="overlay_email">${member.mail}@du.se</span>
         </div>
-        </div>
-    </div>
+   </div>
+
+    
+  </div>
   `;
   return thumbnail;
 }
