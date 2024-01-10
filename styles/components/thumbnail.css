@@ -1,5 +1,5 @@
 .thumbnail_border {
-    border:.5rem solid hsl(var(--base-hue-1), 20%, 20%);
+    border: 0.4rem solid hsl(var(--base-hue-1), 20%, 20%);
 }
 
 .thumbnail_br {
@@ -82,9 +82,9 @@
 @media screen and (min-width: 1366px) {
    
     .overlay_name{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .overlay_email{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
