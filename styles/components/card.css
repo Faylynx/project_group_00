@@ -1,0 +1,56 @@
+
+ .card{
+    .header{
+        flex-grow: 2;
+        border-radius: 1rem 1rem 0 0;
+    }
+    .subheading{
+        opacity: 0.7;
+      }
+    .paragraph{
+        flex-grow: 3;
+    }
+    .box{
+        flex-grow: 1;
+        border-radius: 0 0 1rem 1rem;
+        .button{ 
+            color: var(--white);
+            position: relative;
+            right: -70%;
+            top: 20%;
+            transform: scale(0.9);
+            box-shadow: 0.8em 0.8em 1.5em rgba(0, 0, 0, 0.4); 
+            border-radius: 0.5em; 
+            font-size: 0.8em; 
+            cursor: pointer; 
+            width: 8em; 
+            height: 2.5em; 
+        }
+    }
+}
+ 
+ 
+  
+
+  
+
+ 
+  
+  
+
+ 
+
+/*   .paragraph2 p{
+    max-width: 60ch;
+  }
+
+
+  .paragraph3{
+    height: 35vh;
+  }
+  
+  .paragraph3 p{
+    max-width: 43ch;
+  } 
+ */
+  
