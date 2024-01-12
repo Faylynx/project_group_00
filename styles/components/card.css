@@ -9,9 +9,12 @@
       }
     .paragraph{
         flex-grow: 3;
+        padding-inline: 1.5rem;
+        padding-block: 1.5rem;
     }
     .box{
         flex-grow: 1;
+
         border-radius: 0 0 1rem 1rem;
         .button{ 
             color: var(--white);
@@ -25,13 +28,65 @@
             cursor: pointer; 
             width: 8em; 
             height: 2.5em; 
-        }
-    }
-}
- 
- 
-  
+          }
+      
+      }
+  }
+  .container-cards-image{
+    top: 25%;
+    right:3%;
+    width:fit-content;
+    display: block;
+  }
+.secon-layer{
+  border-bottom: 5px solid green;
 
+}
+      .cards-image{
+        width: calc(var(--icon-size) /1.7);
+        height: calc(var(--icon-size) /1.7);
+      }
+    
+
+ 
+ 
+    .container-cards-image { 
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin: 0; 
+      width: fit-content; 
+      display: block; 
+      border: 0.3rem solid;
+      background-color: inherit;
+      border-radius: 50%;
+      border-color: hsl(var(--white-hue), 100%, 96%)
+        hsl(var(--white-hue), 100%, 96%) transparent transparent;
+      transform: rotate(-45deg)translate(-50%, 19%); 
+    }  
+  
+    /*.card__img-lower-border {
+      position: relative;
+      width: fit-content;
+      display: block; 
+      border: 0.3rem solid;
+      border-radius: 50%;
+      border-color: hsla(var(--white-hue), 100%, 96%, 0.5)
+        hsla(var(--white-hue), 100%, 96%, 0.5) transparent transparent;
+      transform: rotate(180deg);
+    }
+    .card__icon {
+      width: calc(var(--icon-size) / 1.7);
+      height: calc(var(--icon-size) /1.7);
+      z-index: 1;
+      border-radius: 50%;
+      transform: rotate(225deg);
+      padding-bottom: .5rem;
+      padding: .5rem; 
+      position: relative;
+      align-items: center;
+    }
+ */
   
 
  
