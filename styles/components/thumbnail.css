@@ -7,7 +7,7 @@
     overflow: hidden;
 }
 
-.overlay_box{
+.thumbnail_box{
     position: relative;
     height: 5rem;
     background-color: hsl(var(--base-hue-1), 20%, 20%);
@@ -21,13 +21,13 @@
     z-index: 1;
 }
 
-.overlay_name {
+.thumbnail_name {
     position: absolute;
     left: 3%;
     font-size: 1.5rem;
 }
 
-.overlay_email{
+.thumbnail_email{
     position: absolute;
     bottom: 10%;
     right: 3%;
@@ -36,7 +36,7 @@
 }
 
 @media screen and (min-width: 768px){
-    .overlay_box {
+    .thumbnail_box {
         display: none;
        
         opacity: 0; 
@@ -44,7 +44,7 @@
     }  
 
 
-.test_overlay:hover .overlay_box {
+.thumbnail_overlay:hover .thumbnail_box {
     display: block;
     opacity: 0.9;
 
@@ -55,12 +55,12 @@
     height: 25%;
 }
 
-.test_overlay:hover {
+.thumbnail_overlay:hover {
     transform: scale(1.08);
     overflow: hidden; 
        
 }
-.test_overlay:hover::before{
+.thumbnail_overlay:hover::before{
     content: "";
     position: absolute;
     height: 100%;
@@ -72,19 +72,15 @@
     hsl(var(--base-hue-3), 180%, 80%),
     hsl(var(--base-hue-3), 180%, 60%));
     mix-blend-mode: multiply;
-    
-    
-
 }
-
 }
 
 @media screen and (min-width: 1366px) {
    
-    .overlay_name{
+    .thumbnail_name{
         font-size: 1rem;
     }
-    .overlay_email{
+    .thumbnail_email{
         font-size: 1rem;
     }
 }

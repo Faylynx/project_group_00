@@ -2,49 +2,54 @@ function memberThumbnail(member) {
   const thumbnail = `
   <!------ One Card - One Col ------>
 
-  <div class=" br-1 col-12 col-xs-6 col-md-4 col-lg-3 col-xxl-2 gap-2 " >
+<div class=" br-1 col-12 col-xs-6 col-md-4 col-lg-3 col-xxl-2 gap-2 " >
 
-   <div class=" test_overlay thumbnail_border thumbnail_br">
-   <!------ Card Img ------>
-   <img class="testtest" 
-        srcset="
+  <div class="thumbnail_overlay thumbnail_border thumbnail_br">
+    <picture>
+        <!------ Card Img ------>
+    <source class="thumbnail_img" 
+      srcset="
         ./img/informative/member/${member.id}/webp/${member.id}_256.webp 256w,
         ./img/informative/member/${member.id}/webp/${member.id}_512.webp 512w,
         ./img/informative/member/${member.id}/webp/${member.id}_860.webp 860w,
         ./img/informative/member/${member.id}/webp/${member.id}_1024.webp 1024w,
-        ./img/informative/member/${member.id}/webp/${member.id}_2048.webp 2048w
-        sizes="(max-width: 256px) 256px,
-          (max-width: 512px) 512px,
-          (max-width: 860px) 860px,
-          (max-width: 1024px) 1024px, 
-          2048px" 
-        src="./img/informative/member/${member.id}/webp/${member.id}_512.webp"
-        width="512" height="512"
-        srcset="
+        ./img/informative/member/${member.id}/webp/${member.id}_2048.webp 2048w"
+      sizes="
+          (max-width: 1366px) 16vw,
+          (max-width: 996px) 25vw,
+          (max-width: 768px) 33vw,
+          (max-width: 480px) 50vw,
+          (max-width: 392px) 100vw"
+    />
+    <source
+      srcset="
         ./img/informative/member/${member.id}/jpg/${member.id}_256.jpg 256w,
         ./img/informative/member/${member.id}/jpg/${member.id}_512.jpg 512w,
         ./img/informative/member/${member.id}/jpg/${member.id}_860.jpg 860w,
         ./img/informative/member/${member.id}/jpg/${member.id}_1024.jpg 1024w,
-        ./img/informative/member/${member.id}/jpg/${member.id}_2048.jpg 2048w
-        sizes="(max-width: 256px) 256px,
-          (max-width: 512px) 512px,
-          (max-width: 860px) 860px,
-          (max-width: 1024px) 1024px, 
-          2048px" 
-        src="./img/informative/member/${member.id}/jpg/${member.id}_512.jpg"
-        width="512" height="512"
-        alt="Image of ${member.first_name} ${member.last_name}">
+        ./img/informative/member/${member.id}/jpg/${member.id}_2048.jpg 2048w"
+      sizes="
+        (max-width: 1366px) 16vw,
+        (max-width: 996px) 25vw,
+        (max-width: 768px) 33vw,
+        (max-width: 480px) 50vw,
+        (max-width: 392px) 100vw"
+    /> 
+    <img src="
+      ./img/informative/member/${member.id}/jpg/${member.id}_512.jpg" width="512" height="512"
+      alt="Image of ${member.first_name} ${member.last_name}">
 
         
         <!------ Overlay div ------>
-        <div class = "overlay_box">
-          <p class="overlay_name"> ${member.first_name} ${member.last_name}</p>
-          <span class="overlay_email">${member.mail}@du.se</span>
-        </div>
-   </div>
+      <div class = "thumbnail_box">
+        <p class="thumbnail_name"> ${member.first_name} ${member.last_name}</p>
+          <span class="thumbnail_email">${member.mail}@du.se</span>
+      </div>
+    </picture>
+  </div>
 
     
-  </div>
+</div>
   `;
   return thumbnail;
 }
